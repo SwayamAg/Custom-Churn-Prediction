@@ -36,7 +36,7 @@ The dataset remains the same, containing customer details such as **Geography, C
 ---
 
 ## 🔨 Model Architecture (Tuned Version)  
-```python  
+```python
 # Tuned neural network  
 model = Sequential([  
     Input(shape=(X_train.shape[1],)),  
@@ -49,7 +49,12 @@ model = Sequential([
 
 ---
 
-## 🔧 Tuned Hyperparameters  
+# Churn Prediction (Tuned Version)  
+Improved model performance by tuning hyperparameters, reducing overfitting, and enhancing learning stability.  
+
+---
+
+## 🛠 **Tuned Hyperparameters**  
 - **Optimizer**: Adam  
 - **Loss Function**: Binary Crossentropy  
 - **Epochs**: 100  
@@ -59,22 +64,22 @@ model = Sequential([
 
 ---
 
-## 📊 Results & Observations  
+## 📊 **Results & Observations**  
 - **Accuracy on Test Set**: **~86%**  
-- Reduced overfitting with **regularization & dropout**  
-- Enhanced the **model’s learning capability** by increasing layers and adjusting batch size  
-- More stable **accuracy and loss curves** compared to the earlier version  
+- 🔵 Reduced **overfitting** with **regularization & dropout**  
+- 🔵 Enhanced the **model’s learning** by increasing layers and adjusting batch size  
+- 🔵 Achieved **more stable accuracy and loss curves**  
 
 ---
 
-## 📜 Learning Takeaways  
-- 🧠 **Hyperparameter tuning and regularization** can significantly improve model performance.  
-- 🛡️ Adding **Dropout layers** reduces overfitting.  
-- 📈 Increasing **neural network complexity** with careful tuning improves learning for non-linear datasets.  
+## 🧠 **Learning Takeaways**  
+- 🎯 **Hyperparameter tuning** and **regularization** improved overall model performance  
+- 🛡️ Adding **Dropout layers** reduced overfitting significantly  
+- 🔧 Increasing **network complexity** carefully boosted learning for non-linear data  
 
 ---
 
-## 📎 Repository Structure  
+## 📁 **Repository Structure**   
 
 ```
 📂 Churn_Prediction_DL
