@@ -69,15 +69,15 @@ model = Sequential([
 
 ### 📈 Accuracy & Loss Graphs (Before vs After Tuning)  
 
-- **Accuracy Comparison:**  
+- **Accuracy Graph (Training vs Validation)**  
   ![accuracy_vs_val_acc](https://github.com/user-attachments/assets/25b8b774-cda7-47af-af08-844e341ce7aa)
   
-  _(Accuracy curve comparison between the original model and the tuned model. Observe the increase in test accuracy and reduced gap between training and validation accuracy.)_  
+  _(This graph shows how the training and validation accuracy improved over epochs with the tuned hyperparameters.)_  
 
-- **Loss Comparison:**  
+- **Loss Graph (Training vs Validation)**  
   ![loss_vs_val_loss](https://github.com/user-attachments/assets/c5897d99-399e-4efd-8835-3f19fae8b32f)
  
-  _(Loss curve comparison showing reduced validation loss and smoother convergence for the tuned model.)_  
+  _(The loss curve demonstrates better convergence and reduced overfitting with the tuned model.)_  
  
 
 ---
