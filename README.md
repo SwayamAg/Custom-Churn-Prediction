@@ -75,4 +75,29 @@ model = Sequential([
 ---
 
 ## 📎 Repository Structure
+```
+📂 Churn_Prediction_DL
+├── 📄 Churn_Modelling.csv
+├── 📄 churn_prediction.ipynb
+├── 📄 requirements.txt
+├── 📄 README.md  
+```
+
+---
+
+## 📦 Installation & Requirements
+To install dependencies, run:
+```bash
+pip install -r requirements.txt
+```
+
+### **requirements.txt**
+```
+tensorflow
+keras
+numpy
+pandas
+matplotlib
+scikit-learn
+```
 
