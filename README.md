@@ -1,116 +1,78 @@
-# Custom-Churn-Prediction# Churn Prediction Using Deep Learning - First Attempt
+# Custom-Churn-Prediction-Tuned-Version  
+### Churn Prediction Using Deep Learning - Tuned Version  
 
-## 📌 Project Overview
-This is my first attempt at predicting customer churn using a **Deep Learning model** built with **TensorFlow & Keras**. The dataset used is **Churn_Modelling.csv**, and the goal is to classify whether a customer will exit (churn) or stay with the bank.
+## 📌 Project Overview  
+This is the **tuned version** of my customer churn prediction project, where I improved the model’s accuracy from **80% to 86%** through **hyperparameter tuning, regularization, and architectural adjustments**.  
 
-### 🎯 Key Highlights:
-- Built a **Sequential Neural Network** with **TensorFlow/Keras**
-- Achieved **~80% accuracy**
-- Applied **One-Hot Encoding & Feature Scaling**
-- Used **ReLU & Sigmoid activations**
-- Trained for **100 epochs**
-
----
-
-## 📂 Dataset Information
-The dataset consists of customer details, such as **Geography, Gender, Credit Score, Balance, etc.**
-
-### 🔑 Features Used:
-| Feature Name | Description |
-|-------------|-------------|
-| **CreditScore** | Customer's credit score |
-| **Geography** | Country of residence |
-| **Gender** | Male/Female |
-| **Age** | Customer's age |
-| **Tenure** | Years of account ownership |
-| **Balance** | Account balance |
-| **NumOfProducts** | Number of bank products used |
-| **HasCrCard** | Whether the customer has a credit card |
-| **IsActiveMember** | Whether the customer is active |
-| **EstimatedSalary** | Estimated salary |
-
-### 🎯 Target Variable:
-- `Exited` (1 = Churn, 0 = No Churn)
+### 🎯 Key Highlights:  
+- Enhanced **Sequential Neural Network** using **TensorFlow & Keras**  
+- Applied **L2 Regularization & Dropout**  
+- Increased the number of layers and fine-tuned hyperparameters  
+- Improved **accuracy from 80% to 86%**  
+- Trained for **100 epochs** with optimized batch size  
 
 ---
 
-## 🔨 Model Architecture
-```python
-# Build the neural network
-model = Sequential([
-    Input(shape=(X_train.shape[1],)),
-    Dense(3, activation='relu'),
-    Dense(11, activation='relu'),
-    Dense(1, activation='sigmoid')
+## 📂 Dataset Information  
+The dataset remains the same, containing customer details such as **Geography, Credit Score, Age, Balance, etc.**  
+
+### 🔑 Features Used:  
+| Feature Name        | Description                            |  
+|---------------------|----------------------------------------|  
+| **CreditScore**      | Customer's credit score                |  
+| **Geography**        | Country of residence                   |  
+| **Gender**           | Male/Female                            |  
+| **Age**              | Customer's age                         |  
+| **Tenure**           | Years of account ownership             |  
+| **Balance**          | Account balance                        |  
+| **NumOfProducts**    | Number of bank products used           |  
+| **HasCrCard**        | Whether the customer has a credit card |  
+| **IsActiveMember**   | Whether the customer is active         |  
+| **EstimatedSalary**  | Estimated salary                       |  
+
+### 🎯 Target Variable:  
+- **`Exited`** (1 = Churn, 0 = No Churn)  
+
+---
+
+## 🔨 Model Architecture (Tuned Version)  
+```python  
+# Tuned neural network  
+model = Sequential([  
+    Input(shape=(X_train.shape[1],)),  
+    Dense(64, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.01)),  
+    Dropout(0.3),  
+    Dense(32, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(0.01)),  
+    Dropout(0.3),  
+    Dense(1, activation='sigmoid')  
 ])
-```
-
-### **Hyperparameters**
-- **Optimizer**: Adam
-- **Loss Function**: Binary Crossentropy
-- **Epochs**: 100
-- **Validation Split**: 20%
 
 ---
 
-## 📊 Results & Observations
-- **Accuracy on Test Set:** ~80%
-- **Validation Accuracy fluctuated** across epochs
-- The model could be **further optimized** by adjusting layers, neurons, and hyperparameters.
-
-### 📉 Accuracy & Loss Curves:
-![loss_vs_val_loss](https://github.com/user-attachments/assets/844e0ef6-2d4f-4acd-89c3-c3b483610683)
-![accuracy_vs_val_acc](https://github.com/user-attachments/assets/a233749e-007c-4189-941f-30e4827d50b7)
-
-
+## 🔧 Tuned Hyperparameters  
+- **Optimizer**: Adam  
+- **Loss Function**: Binary Crossentropy  
+- **Epochs**: 100  
+- **Batch Size**: 64  
+- **L2 Regularization**: 0.01  
+- **Dropout**: 30%  
 
 ---
 
-## 📌 Next Steps
-✅ **Hyperparameter Tuning** (Neurons, Layers, Regularization, Dropout)
-✅ **Reduce Overfitting** (Better architecture)
-✅ **Increase Accuracy** (Aim for 85-90%)
+## 📊 Results & Observations  
+- **Accuracy on Test Set**: **~86%**  
+- Reduced overfitting with **regularization & dropout**  
+- Enhanced the **model’s learning capability** by increasing layers and adjusting batch size  
+- More stable **accuracy and loss curves** compared to the earlier version  
 
 ---
 
-## 📜 Learning Takeaways
-📌 Neural networks **require careful tuning** to improve performance.
-📌 **Feature scaling & encoding** are crucial for better training.
-📌 **Churn prediction** can benefit from additional feature engineering.
+## 📜 Learning Takeaways  
+📌 **Hyperparameter tuning and regularization** can significantly improve model performance.  
+📌 Adding **Dropout layers** reduces overfitting.  
+📌 Increasing **neural network complexity** with careful tuning improves learning for non-linear datasets.  
 
 ---
 
 ## 📎 Repository Structure
-```
-📂 Churn_Prediction_DL
-├── 📄 Churn_Modelling.csv
-├── 📄 churn_prediction.ipynb
-├── 📄 requirements.txt
-├── 📄 README.md  
-```
-
----
-
-## 📦 Installation & Requirements
-To install dependencies, run:
-```bash
-pip install -r requirements.txt
-```
-
-### **requirements.txt**
-```
-tensorflow
-keras
-numpy
-pandas
-matplotlib
-scikit-learn
-```
-
----
-
-## 📌 Future Update (86% Accuracy Version) 🚀
-I plan to **improve this model** with better hyperparameter tuning & architecture adjustments. Stay tuned for a follow-up post! 🎯
-
-📌 **[Follow me on LinkedIn]([your-linkedin-profile-link](https://www.linkedin.com/in/swayam-agarwal/)) for updates!** 😊
 
