@@ -68,13 +68,14 @@ model = Sequential([
 ---
 
 ## 📜 Learning Takeaways  
-📌 **Hyperparameter tuning and regularization** can significantly improve model performance.  
-📌 Adding **Dropout layers** reduces overfitting.  
-📌 Increasing **neural network complexity** with careful tuning improves learning for non-linear datasets.  
+- 🧠 **Hyperparameter tuning and regularization** can significantly improve model performance.  
+- 🛡️ Adding **Dropout layers** reduces overfitting.  
+- 📈 Increasing **neural network complexity** with careful tuning improves learning for non-linear datasets.  
 
 ---
 
-## 📎 Repository Structure
+## 📎 Repository Structure  
+
 ```
 📂 Churn_Prediction_DL
 ├── 📄 Churn_Modelling.csv
