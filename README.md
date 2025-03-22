@@ -1,3 +1,4 @@
+
 # Custom-Churn-Prediction-Tuned-Version  
 ### Churn Prediction Using Deep Learning - Tuned Version  
 
@@ -46,11 +47,7 @@ model = Sequential([
     Dropout(0.3),  
     Dense(1, activation='sigmoid')  
 ])
-
----
-
-# Churn Prediction (Tuned Version)  
-Improved model performance by tuning hyperparameters, reducing overfitting, and enhancing learning stability.  
+```
 
 ---
 
@@ -69,6 +66,10 @@ Improved model performance by tuning hyperparameters, reducing overfitting, and 
 - 🔵 Reduced **overfitting** with **regularization & dropout**  
 - 🔵 Enhanced the **model’s learning** by increasing layers and adjusting batch size  
 - 🔵 Achieved **more stable accuracy and loss curves**  
+
+### Accuracy & Loss Graphs (Before vs After Tuning)  
+![Model Performance Graphs](graph_improved_versions.png)  
+_(Comparison between original model and tuned version)_  
 
 ---
 
@@ -106,4 +107,3 @@ pandas
 matplotlib
 scikit-learn
 ```
-
