@@ -67,9 +67,18 @@ model = Sequential([
 - 🔵 Enhanced the **model’s learning** by increasing layers and adjusting batch size  
 - 🔵 Achieved **more stable accuracy and loss curves**  
 
-### Accuracy & Loss Graphs (Before vs After Tuning)  
-![Model Performance Graphs](graph_improved_versions.png)  
-_(Comparison between original model and tuned version)_  
+### 📈 Accuracy & Loss Graphs (Before vs After Tuning)  
+
+- **Accuracy Comparison:**  
+  ![accuracy_vs_val_acc](https://github.com/user-attachments/assets/25b8b774-cda7-47af-af08-844e341ce7aa)
+  
+  _(Accuracy curve comparison between the original model and the tuned model. Observe the increase in test accuracy and reduced gap between training and validation accuracy.)_  
+
+- **Loss Comparison:**  
+  ![loss_vs_val_loss](https://github.com/user-attachments/assets/c5897d99-399e-4efd-8835-3f19fae8b32f)
+ 
+  _(Loss curve comparison showing reduced validation loss and smoother convergence for the tuned model.)_  
+ 
 
 ---
 
